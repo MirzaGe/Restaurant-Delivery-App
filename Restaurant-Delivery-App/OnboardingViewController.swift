@@ -16,8 +16,8 @@ struct Slide {
     let buttonTitle: String
     
     static let collection: [Slide] = [
-        .init(title: "Get Your Favourite Food Delivered To You Under 30 Minutes Anytime", animationName: "", buttonColor: .systemYellow, buttonTitle: "Next"),
-        .init(title: "We Serve Only From Choiced Restaurants In Your Area", animationName: "", buttonColor: .systemGreen, buttonTitle: "OrderNow")]
+        .init(title: "Get Your Favourite Food Delivered To You Under 30 Minutes Anytime", animationName: "lottieDeliveryGuy", buttonColor: .systemYellow, buttonTitle: "Next"),
+        .init(title: "We Serve Only From Choiced Restaurants In Your Area", animationName: "lottieRestaurant", buttonColor: .systemGreen, buttonTitle: "OrderNow")]
 }
 
 
@@ -84,7 +84,7 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
         actionButton.backgroundColor = slide.buttonColor
         actionButton.setTitle(slide.buttonTitle, for: .normal)
         
-        let animation = Animation.named("lottieRestaurant")
+        let animation = Animation.named(slide.animationName)
         
         animationView.animation = animation
         animationView.loopMode = .loop
