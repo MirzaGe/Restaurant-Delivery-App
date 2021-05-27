@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Lottie
+
 
 struct Slide {
     let title: String
@@ -73,7 +75,7 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
 
 class OnboardingCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var animationView: UIView!
+    @IBOutlet weak var animationView: AnimationView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var actionButton: UIButton!
     
@@ -81,6 +83,16 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
         titleLabel.text = slide.title
         actionButton.backgroundColor = slide.buttonColor
         actionButton.setTitle(slide.buttonTitle, for: .normal)
+        
+        let animation = Animation.named("lottieRestaurant")
+        
+        animationView.animation = animation
+        animationView.loopMode = .loop
+        
+        if !animationView.isAnimationPlaying {
+            animationView.play()
+        }
+        
     }
     
     @IBAction func actionButtonTapped() {

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0F91C4EBAFFAC6D7F641DF9F /* Pods_Restaurant_Delivery_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE3951D4D61A1ED2D4F97B0 /* Pods_Restaurant_Delivery_App.framework */; };
 		446CADF1265FD30200FAB8B9 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 446CADF0265FD30200FAB8B9 /* Podfile */; };
+		446CAE03265FDB5400FAB8B9 /* lottieRestaurant.json in Resources */ = {isa = PBXBuildFile; fileRef = 446CAE01265FDB5300FAB8B9 /* lottieRestaurant.json */; };
+		446CAE04265FDB5400FAB8B9 /* lottieDeliveryGuy.json in Resources */ = {isa = PBXBuildFile; fileRef = 446CAE02265FDB5400FAB8B9 /* lottieDeliveryGuy.json */; };
 		4493ED1F265F2D5400D1A0B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4493ED1E265F2D5400D1A0B4 /* AppDelegate.swift */; };
 		4493ED21265F2D5400D1A0B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4493ED20265F2D5400D1A0B4 /* SceneDelegate.swift */; };
 		4493ED23265F2D5400D1A0B4 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4493ED22265F2D5400D1A0B4 /* OnboardingViewController.swift */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		3BA83F2325BD2F2D3FE5B28B /* Pods-Restaurant-Delivery-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurant-Delivery-App.debug.xcconfig"; path = "Target Support Files/Pods-Restaurant-Delivery-App/Pods-Restaurant-Delivery-App.debug.xcconfig"; sourceTree = "<group>"; };
 		446CADF0265FD30200FAB8B9 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		446CAE01265FDB5300FAB8B9 /* lottieRestaurant.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottieRestaurant.json; sourceTree = "<group>"; };
+		446CAE02265FDB5400FAB8B9 /* lottieDeliveryGuy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottieDeliveryGuy.json; sourceTree = "<group>"; };
 		4493ED1B265F2D5400D1A0B4 /* Restaurant-Delivery-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Restaurant-Delivery-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4493ED1E265F2D5400D1A0B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4493ED20265F2D5400D1A0B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +57,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		446CADF8265FD71200FAB8B9 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				446CAE02265FDB5400FAB8B9 /* lottieDeliveryGuy.json */,
+				446CAE01265FDB5300FAB8B9 /* lottieRestaurant.json */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
 		4493ED12265F2D5400D1A0B4 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +88,7 @@
 		4493ED1D265F2D5400D1A0B4 /* Restaurant-Delivery-App */ = {
 			isa = PBXGroup;
 			children = (
+				446CADF8265FD71200FAB8B9 /* assets */,
 				4493ED1E265F2D5400D1A0B4 /* AppDelegate.swift */,
 				4493ED20265F2D5400D1A0B4 /* SceneDelegate.swift */,
 				4493ED22265F2D5400D1A0B4 /* OnboardingViewController.swift */,
@@ -153,6 +167,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				446CAE04265FDB5400FAB8B9 /* lottieDeliveryGuy.json in Resources */,
+				446CAE03265FDB5400FAB8B9 /* lottieRestaurant.json in Resources */,
 				4493ED2B265F2D5700D1A0B4 /* LaunchScreen.storyboard in Resources */,
 				4493ED28265F2D5700D1A0B4 /* Assets.xcassets in Resources */,
 				446CADF1265FD30200FAB8B9 /* Podfile in Resources */,
