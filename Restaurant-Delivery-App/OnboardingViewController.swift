@@ -24,6 +24,8 @@ private func setupCollectionView() {
     
     collectionView.dataSource = self
     collectionView.delegate = self
+    collectionView.contentInsetAdjustmentBehavior = .never
+    collectionView.isPagingEnabled = true
     
     
 }
@@ -41,6 +43,16 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
         
         return cell
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemWidth = collectionView.bounds.width
+        let itemHeight = collectionView.bounds.height
+        return CGSize(width: itemWidth, height: itemHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
     
     
