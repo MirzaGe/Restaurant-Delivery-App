@@ -55,3 +55,13 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
     
     
 }
+
+class OnboardingCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var animationView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBAction func actionButtonTapped() {
+       
+    }
+}
