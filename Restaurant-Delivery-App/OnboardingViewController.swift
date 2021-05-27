@@ -7,10 +7,23 @@
 
 import UIKit
 
+struct Slide {
+    let title: String
+    let animationName: String
+    let buttonColor: UIColor
+    let buttonTitle: String
+    
+    static let collection: [Slide] = [
+        .init(title: "Get Your Favourite Food Delivered To You Under 30 Minutes Anytime", animationName: "", buttonColor: .systemYellow, buttonTitle: "Next"),
+        .init(title: "We Serve Only From Choiced Restaurants In Your Area", animationName: "", buttonColor: .systemGreen, buttonTitle: "OrderNow")]
+}
+
+
 class OnboardingViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    private let slides: [Slide] = Slide.collection
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +47,13 @@ private func setupCollectionView() {
 
 extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return slides.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
+        let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! OnboardingCollectionViewCell
+        let slide = slides[indexPath.item]
+        cell.configure(with: slide)
         return cell
         
     }
@@ -60,6 +75,13 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var animationView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var actionButton: UIButton!
+    
+    func configure(with slide: Slide) {
+        titleLabel.text = slide.title
+        actionButton.backgroundColor = slide.buttonColor
+        actionButton.setTitle(slide.buttonTitle, for: .normal)
+    }
     
     @IBAction func actionButtonTapped() {
        
